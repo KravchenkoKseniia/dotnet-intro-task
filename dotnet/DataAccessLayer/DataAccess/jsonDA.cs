@@ -26,7 +26,10 @@ public class JsonDa<T> : interfaceJsonDA<T>
     }
     private void SaveData()
     {
-        File.WriteAllText(_path, JsonSerializer.Serialize(_entities));
+        /*File.WriteAllText(_path, JsonSerializer.Serialize(_entities));*/
+        var jsonString = JsonSerializer.Serialize(_entities);
+        using var writer = new StreamWriter(_path);
+        writer.WriteLine(jsonString);
     }
     
     public void Add(T entity)
