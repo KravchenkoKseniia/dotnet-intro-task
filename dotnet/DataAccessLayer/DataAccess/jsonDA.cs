@@ -10,7 +10,12 @@ public class JsonDa<T> : interfaceJsonDA<T>
     {
         if (File.Exists(_path))
         {
-            var json = File.ReadAllText(_path);
+            /*var json = File.ReadAllText(_path);
+            _entities = JsonSerializer.Deserialize<List<T>>(json) 
+                        ?? throw new InvalidOperationException("Failed to deserialize data");*/
+
+            using var r = new StreamReader(_path);
+            var json = r.ReadToEnd();
             _entities = JsonSerializer.Deserialize<List<T>>(json) 
                         ?? throw new InvalidOperationException("Failed to deserialize data");
         }
