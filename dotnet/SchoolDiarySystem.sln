@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{D78B1183-6441-4EDA-AEE2-17494EB234B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiarySystem.DataAccessLayer", "DiarySystem.DataAccessLayer\DiarySystem.DataAccessLayer.csproj", "{D78B1183-6441-4EDA-AEE2-17494EB234B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
