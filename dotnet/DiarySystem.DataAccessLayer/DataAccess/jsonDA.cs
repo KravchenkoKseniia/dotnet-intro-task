@@ -1,7 +1,9 @@
 using System.Text.Json;
+using DiarySystem.DataAccess;
+
 namespace dotnet.DataAccess;
 
-public class JsonDa<T> : interfaceJsonDA<T>
+public class JsonDa<T> : IInterfaceJsonDa<T>
 {
     private readonly string _path;
     private List<T> _entities;

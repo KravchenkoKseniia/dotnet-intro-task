@@ -1,5 +1,5 @@
 using dotnet.DataAccess;
-using DataAccessLayer.Entity_Classes;
+using DiarySystem.Entity_Classes;
 
 namespace dotnet;
 

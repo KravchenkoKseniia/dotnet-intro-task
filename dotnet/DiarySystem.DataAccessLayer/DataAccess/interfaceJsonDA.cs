@@ -1,6 +1,6 @@
-namespace dotnet.DataAccess;
+namespace DiarySystem.DataAccess;
 
-public interface interfaceJsonDA<T>
+public interface IInterfaceJsonDa<T>
 {
     void Add(T entity);
     void Update(T entity);

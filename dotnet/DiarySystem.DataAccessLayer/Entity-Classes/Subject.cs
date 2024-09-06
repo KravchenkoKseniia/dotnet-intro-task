@@ -1,4 +1,4 @@
-namespace DataAccessLayer.Entity_Classes;
+namespace DiarySystem.Entity_Classes;
 
 public class Subject
 {
