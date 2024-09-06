@@ -1,14 +1,14 @@
-using dotnet.DataAccess;
+using DiarySystem.DataAccess;
 using DiarySystem.Entity_Classes;
 
-namespace dotnet;
+namespace DiarySystem;
 
 public class Program
 {
     static void Main(string[] args)
     {
-        var studentDa = new JsonDa<Student>("students.json");
-        var subjectDa = new JsonDa<Subject>("subjects.json");
+        var studentDa = new Repository<Student>("students.json");
+        var subjectDa = new Repository<Subject>("subjects.json");
 
         studentDa.Add(new Student { Id = 3, Name = "John", Age = 20, Class = "A" });
         studentDa.Add(new Student { Id = 4, Name = "Jane", Age = 21, Class = "B" });

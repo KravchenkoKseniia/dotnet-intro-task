@@ -1,9 +1,8 @@
 using System.Text.Json;
-using DiarySystem.DataAccess;
 
-namespace dotnet.DataAccess;
+namespace DiarySystem.DataAccess;
 
-public class JsonDa<T> : IInterfaceJsonDa<T>
+public class Repository<T> : IInterfaceJsonDa<T>
 {
     private readonly string _path;
     private List<T> _entities;
@@ -85,7 +84,7 @@ public class JsonDa<T> : IInterfaceJsonDa<T>
         return _entities;
     }
     
-    public JsonDa(string path)
+    public Repository(string path)
     {
         _path = path;
         _entities = [];
