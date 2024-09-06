@@ -11,10 +11,6 @@ public class Repository<T> : IInterfaceJsonDa<T>
     {
         if (File.Exists(_path))
         {
-            /*var json = File.ReadAllText(_path);
-            _entities = JsonSerializer.Deserialize<List<T>>(json) 
-                        ?? throw new InvalidOperationException("Failed to deserialize data");*/
-
             using var r = new StreamReader(_path);
             var json = r.ReadToEnd();
             _entities = JsonSerializer.Deserialize<List<T>>(json) 
@@ -27,7 +23,6 @@ public class Repository<T> : IInterfaceJsonDa<T>
     }
     private void SaveData()
     {
-        /*File.WriteAllText(_path, JsonSerializer.Serialize(_entities));*/
         var jsonString = JsonSerializer.Serialize(_entities);
         using var writer = new StreamWriter(_path);
         writer.WriteLine(jsonString);
@@ -78,11 +73,6 @@ public class Repository<T> : IInterfaceJsonDa<T>
         SaveData();
     }
     
-    public List<T> GetAll()
-    {
-        LoadData();
-        return _entities;
-    }
     
     public Repository(string path)
     {
